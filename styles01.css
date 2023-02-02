@@ -1,0 +1,122 @@
+body
+{
+background-color: lightgrey;
+display: grid;
+justify-content: center;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    border: 1px solid grey;
+    max-width: 800px;
+    margin: 10px;
+    /* padding: 10px; */
+    display: grid;
+    grid-template: "first mid last";
+}
+
+ul {
+    margin: 10px;
+}
+
+#first, #mid, #last {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#first {
+text-align: left;
+}
+
+#mid {
+text-align: center;
+}
+
+#last {
+text-align: right;
+}
+
+main {
+    border: 1px solid grey;
+    max-width: 800px;
+    margin: 10px;
+    /* padding: 10px; */
+    display: grid;
+    grid-template:
+    "row1"
+    "row2"
+}
+
+#row1 {
+    /* padding: 10px; */
+    margin: 10px;
+    display: grid;
+    grid-template:
+    "picture mainText";
+    
+}
+
+#row2 {
+    /* padding: 10px; */
+    margin: 10px;
+    display: grid;
+    grid-template:
+    "strengths achievment" 1fr 1fr;
+
+}
+
+#mainText {
+    /* padding: 20px; */
+    margin: 10px;
+}
+
+#strengths, #achievments {
+    /* padding: 10px; */
+    margin: 10px;
+}
+
+#picture {
+    width: 230px;
+    height: 230px;
+    /* padding: 10px; */
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#picture1{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 500px) {
+    main {
+        display: grid;
+        grid-template:
+            "mainText"
+            "picture"
+            "strengths"
+            "achievment";
+    }
+    #row1 {
+        display: grid;
+        grid-template:
+        "picture"
+        "mainText"
+        
+    }
+    
+    #row2 {
+        display: grid;
+        grid-template:
+        "strengths"
+        "achievment";
+    
+    }
+}
